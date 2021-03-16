@@ -4,7 +4,14 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'airbnb/hooks', 'airbnb/whitespace', 'prettier'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'airbnb',
+    'airbnb/hooks',
+    'airbnb/whitespace',
+    'prettier',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -14,7 +21,11 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    '@typescript-eslint/ban-ts-comment': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
     'react/jsx-uses-react': 'off',
+    'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'no-shadow': 'off',
     'object-curly-newline': [
@@ -29,6 +40,7 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/no-danger': 'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', 'tsx'] }],
     'react/jsx-sort-props': [
       'error',
       {
@@ -64,7 +76,6 @@ module.exports = {
         },
       },
     ],
-    'no-unused-vars': ['error'],
   },
   settings: {
     'import/resolver': {

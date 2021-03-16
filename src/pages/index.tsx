@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
 import ExampleSvg from 'icons/example.inline.svg';
-
 import styles from 'styles/Home.module.css';
 
 export default function Home() {
