@@ -21,6 +21,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    '@typescript-eslint/no-var-requires': 'warn',
     '@typescript-eslint/ban-ts-comment': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
